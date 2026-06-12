@@ -6,13 +6,13 @@
        基础页面配置
        ========================================================= -->
 
-  <!-- 设置网页字符编码，避免中文或特殊字符乱码 -->
+  <!-- 设置网页字符编码，避免中文和特殊字符乱码 -->
   <meta charset="UTF-8">
 
-  <!-- 提高网页在旧版 Microsoft Edge 浏览器中的兼容性 -->
+  <!-- 提高旧版 Microsoft Edge 的兼容性 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- 让网页在手机、平板和电脑上自动适配屏幕宽度 -->
+  <!-- 让网页适配手机、平板和桌面设备 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- 浏览器标签页标题 -->
@@ -33,8 +33,7 @@
   <!-- 网页作者 -->
   <meta name="author" content="Evan Wu">
 
-  <!-- 浏览器标签页小图标 -->
-  <!-- 文件位置：assets/img/favicon.jpg -->
+  <!-- 浏览器标签页图标 -->
   <link
     rel="icon"
     href="assets/img/favicon.jpg"
@@ -43,20 +42,20 @@
 
 
   <!-- =========================================================
-       外部字体与图标库
+       外部字体和图标
        ========================================================= -->
 
   <!-- 提前连接 Google Fonts，提高字体加载速度 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- 使用 Inter 字体 -->
+  <!-- 页面主字体 -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <!-- Academicons：用于 Google Scholar 等学术平台图标 -->
+  <!-- 学术平台图标库，例如 Google Scholar -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
@@ -64,7 +63,7 @@
     crossorigin="anonymous"
   >
 
-  <!-- Font Awesome：用于邮箱、GitHub、LinkedIn、深色模式等图标 -->
+  <!-- 通用图标库，例如 GitHub、LinkedIn、邮箱和深色模式图标 -->
   <script
     src="https://kit.fontawesome.com/a860a211d3.js"
     crossorigin="anonymous"
@@ -72,401 +71,30 @@
 
 
   <!-- =========================================================
-       本地 CSS 文件
+       本地样式文件
        ========================================================= -->
 
-  <!-- 本地字体样式 -->
+  <!-- 本地字体配置 -->
   <link
     rel="stylesheet"
     href="assets/css/font_sans_serif.css"
   >
 
-  <!-- Luka 模板主样式 -->
+  <!-- Evan 主页主样式 -->
   <link
     rel="stylesheet"
     href="assets/css/theme-evan.css"
   >
-
-
-  <!-- =========================================================
-       当前页面附加样式
-       ========================================================= -->
-
-  <style>
-    /*
-      全局启用平滑滚动。
-
-      点击顶部导航栏时，页面会平滑移动到对应栏目。
-    */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /*
-      全站使用 Inter 字体。
-    */
-    body {
-      font-family: "Inter", sans-serif;
-    }
-
-    /*
-      防止通过导航栏跳转后，栏目标题被顶部导航栏遮挡。
-    */
-    .section {
-      scroll-margin-top: 90px;
-    }
-
-    /*
-      顶部导航栏左侧链接布局。
-    */
-    .nav-left {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 18px;
-    }
-
-
-    /* =========================================================
-       左侧个人资料区域
-       ========================================================= */
-
-    /*
-      头像外层容器。
-
-      固定宽高并设置圆角，使头像显示为圆形。
-    */
-    .profile-card .avatar {
-      display: block;
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 20px;
-      overflow: hidden;
-      border-radius: 50%;
-      text-decoration: none;
-    }
-
-    /*
-      头像图片样式。
-
-      object-fit: cover：
-      在不拉伸图片的情况下填满圆形区域。
-
-      object-position: center：
-      默认显示图片中央区域。
-    */
-    .profile-card .avatar img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 50%;
-    }
-
-    /*
-      姓名下方的身份信息。
-    */
-    .site-role {
-      margin: 6px 0 4px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    /*
-      学校和 ELITE Stream 信息。
-    */
-    .site-affiliation {
-      margin: 0 0 4px;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      text-align: center;
-      opacity: 0.82;
-    }
-
-    /*
-      地点信息。
-    */
-    .site-location {
-      margin: 0 0 10px;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      text-align: center;
-      opacity: 0.65;
-    }
-
-
-    /* =========================================================
-       教育和经历卡片
-       ========================================================= */
-
-    /*
-      教育经历和工作经历中的机构图片。
-    */
-    .institution-logo {
-      width: 64px;
-      height: 64px;
-      flex-shrink: 0;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 10px;
-    }
-
-    /*
-      让经历内容自动占据剩余宽度。
-    */
-    .experience-content {
-      width: 100%;
-    }
-
-    /*
-      经历标题。
-    */
-    .exp-title {
-      margin-bottom: 4px;
-    }
-
-    /*
-      经历详情。
-    */
-    .exp-detail {
-      margin-top: 4px;
-      margin-bottom: 4px;
-      line-height: 1.65;
-    }
-
-    /*
-      经历日期。
-    */
-    .exp-period {
-      margin-top: 4px;
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-      opacity: 0.72;
-    }
-
-    /*
-      经历地点。
-    */
-    .exp-location {
-      margin-top: 2px;
-      margin-bottom: 6px;
-      font-size: 0.88rem;
-      opacity: 0.68;
-    }
-
-    /*
-      项目或经历下方的成果列表。
-    */
-    .achievement-list {
-      margin: 12px 0 0;
-      padding-left: 20px;
-    }
-
-    .achievement-list li {
-      margin-bottom: 8px;
-      line-height: 1.7;
-    }
-
-
-    /* =========================================================
-       项目区域
-       ========================================================= */
-
-    /*
-      项目名称。
-    */
-    .project-title {
-      display: inline-block;
-      margin-bottom: 8px;
-      font-size: 1.02rem;
-      font-weight: 700;
-    }
-
-    /*
-      项目副标题。
-    */
-    .project-subtitle {
-      margin: 2px 0 10px;
-      font-size: 0.92rem;
-      font-weight: 500;
-      opacity: 0.78;
-    }
-
-
-    /* =========================================================
-       研究方向标签
-       ========================================================= */
-
-    /*
-      研究方向标签容器。
-    */
-    .research-tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    /*
-      单个研究方向标签。
-    */
-    .research-tag {
-      display: inline-block;
-      padding: 6px 11px;
-      border: 1px solid rgba(127, 127, 127, 0.28);
-      border-radius: 999px;
-      font-size: 0.84rem;
-      line-height: 1.2;
-    }
-
-
-    /* =========================================================
-       技术技能区域
-       ========================================================= */
-
-    /*
-      每一组技能之间的间距。
-    */
-    .skill-group {
-      margin-bottom: 16px;
-    }
-
-    .skill-group:last-child {
-      margin-bottom: 0;
-    }
-
-    /*
-      技能分类标题单独占一行。
-    */
-    .skill-group strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-
-    /* =========================================================
-       数据成果卡片
-       ========================================================= */
-
-    /*
-      三列统计数据布局。
-    */
-    .metric-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    /*
-      单个统计数据卡片。
-    */
-    .metric-card {
-      padding: 14px;
-      border: 1px solid rgba(127, 127, 127, 0.22);
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    /*
-      统计数字。
-    */
-    .metric-number {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 1.35rem;
-      font-weight: 700;
-    }
-
-    /*
-      统计数字下方说明。
-    */
-    .metric-label {
-      font-size: 0.82rem;
-      line-height: 1.4;
-      opacity: 0.72;
-    }
-
-
-    /* =========================================================
-       空白信息占位
-       ========================================================= */
-
-    /*
-      暂时没有的信息使用该样式。
-
-      例如：
-      尚未公开的论文或尚未建立的 Google Scholar。
-    */
-    .empty-placeholder {
-      margin: 0;
-      font-size: 0.95rem;
-      font-style: italic;
-      line-height: 1.6;
-      opacity: 0.62;
-    }
-
-    /*
-      尚未启用的社交链接显示为半透明。
-    */
-    .social-icons a[data-empty-link="true"] {
-      opacity: 0.38;
-      cursor: default;
-    }
-
-
-    /* =========================================================
-       页脚
-       ========================================================= */
-
-    .site-footer {
-      text-align: center;
-    }
-
-
-    /* =========================================================
-       手机和平板适配
-       ========================================================= */
-
-    @media screen and (max-width: 768px) {
-      /*
-        减少手机端导航栏链接间距。
-      */
-      .nav-left {
-        gap: 10px;
-      }
-
-      /*
-        手机端缩小头像。
-      */
-      .profile-card .avatar {
-        width: 150px;
-        height: 150px;
-      }
-
-      /*
-        手机端缩小机构 Logo。
-      */
-      .institution-logo {
-        width: 54px;
-        height: 54px;
-      }
-
-      /*
-        手机端统计卡片改为单列。
-      */
-      .metric-row {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 
 
-<body class="theme-luka">
+<!--
+  必须使用 theme-evan。
+
+  theme-evan.css 中的所有样式都以 body.theme-evan 开头。
+  如果这里写成 theme-luka，主样式将无法正常生效。
+-->
+<body class="theme-evan">
 
   <!-- =========================================================
        顶部导航栏
@@ -475,7 +103,7 @@
   <nav class="top-nav">
     <div class="nav-container">
 
-      <!-- 左侧栏目导航 -->
+      <!-- 左侧导航 -->
       <div class="nav-left">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -487,7 +115,7 @@
         <a href="#publications">Publications</a>
       </div>
 
-      <!-- 右侧深色模式切换按钮 -->
+      <!-- 右侧深色与浅色模式切换按钮 -->
       <div class="nav-right">
         <button
           id="themeToggle"
@@ -531,8 +159,6 @@
           <img
             src="assets/img/avatar.jpg"
             alt="Portrait of Evan Wu"
-            loading="eager"
-            decoding="async"
           >
         </a>
 
@@ -541,22 +167,7 @@
           Evan Wu
         </h1>
 
-        <!-- 当前身份 -->
-        <p class="site-role">
-          Electronic Engineering Undergraduate
-        </p>
-
-        <!-- 学校及项目 -->
-        <p class="site-affiliation">
-          ELITE Stream · The Chinese University of Hong Kong
-        </p>
-
-        <!-- 所在地区 -->
-        <p class="site-location">
-          Hong Kong SAR
-        </p>
-
-        <!-- 邮箱 -->
+        <!-- 联系邮箱 -->
         <p class="site-email">
           tianchunwu10@gmail.com
         </p>
@@ -600,10 +211,9 @@
           </a>
 
           <!--
-            Google Scholar。
+            Google Scholar 暂时没有链接。
 
-            目前没有主页，因此链接暂时为空。
-            以后创建 Google Scholar 后，只需要修改 href。
+            创建 Scholar 主页后，将 href="" 替换为真实网址。
           -->
           <a
             href=""
@@ -627,7 +237,7 @@
 
 
         <!-- ===================================================
-             当前研究方向卡片
+             左侧研究方向卡片
              =================================================== -->
 
         <div class="visitor-card">
@@ -655,7 +265,7 @@
     <main class="content">
 
       <!-- =====================================================
-           个人简介
+           About Me
            ===================================================== -->
 
       <section class="section" id="about">
@@ -670,45 +280,36 @@
             I am <strong>Evan Wu</strong>, an Electronic Engineering
             undergraduate in the <strong>ELITE Stream</strong> at
             <strong>The Chinese University of Hong Kong</strong>.
-            My work focuses on medical robotics, robotic endoscopy,
-            computer vision, and vision-language-action learning.
+          </p>
+
+          <p>
+            My research interests lie at the intersection of
+            <strong>medical robotics</strong>,
+            <strong>robotic endoscopy</strong>,
+            <strong>vision-language-action learning</strong>,
+            <strong>computer vision</strong>, and
+            <strong>embodied intelligence</strong>.
           </p>
 
           <p>
             I am currently a Research Student Helper at the
             Robotics, Perception and Artificial Intelligence Laboratory
-            at CUHK. My research involves developing multimodal robotic
-            systems that integrate endoscopic video, motor states,
-            anatomical and clinical labels, electromagnetic tracking,
-            and real-time embedded control.
+            at CUHK. My work involves multimodal robotic data collection,
+            robotic endoscope control, embedded motor systems,
+            electromagnetic tracking, visual perception,
+            and vision-language-action model development.
           </p>
 
           <p>
-            My current projects investigate autonomous colonoscopy withdrawal,
-            supervised endoscopic navigation, multimodal action learning,
-            and clinician-in-the-loop safety mechanisms.
+            My current projects focus on autonomous colonoscopy withdrawal,
+            clinician-supervised endoscopic navigation,
+            multimodal action learning, and safety-aware robotic autonomy.
           </p>
-
-          <p>
-            I am particularly interested in how embodied foundation models
-            can improve the reliability, interpretability, and clinical
-            usability of intelligent medical robots.
-          </p>
-
-          <!-- 研究方向标签 -->
-          <div class="research-tag-list">
-            <span class="research-tag">Medical Robotics</span>
-            <span class="research-tag">Robotic Endoscopy</span>
-            <span class="research-tag">Vision-Language-Action</span>
-            <span class="research-tag">Computer Vision</span>
-            <span class="research-tag">Embodied Intelligence</span>
-            <span class="research-tag">Multimodal Learning</span>
-          </div>
 
           <!--
             简历下载链接。
 
-            将简历 PDF 放到：
+            PDF 文件需要放在：
             assets/files/Evan_Wu_CV.pdf
           -->
           <p>
@@ -729,7 +330,7 @@
 
 
       <!-- =====================================================
-           教育经历
+           Education
            ===================================================== -->
 
       <section class="section" id="education">
@@ -745,18 +346,10 @@
 
             <div class="experience-item">
 
-              <!--
-                机构图片。
-
-                文件位置：
-                assets/img/institution.jpg
-              -->
               <img
                 src="assets/img/institution.jpg"
                 alt="The Chinese University of Hong Kong"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
@@ -785,10 +378,6 @@
                   August 2024 – December 2027
                 </p>
 
-                <p class="exp-location">
-                  Hong Kong SAR
-                </p>
-
               </div>
             </div>
 
@@ -804,8 +393,6 @@
                 src="assets/img/HIT.jpg"
                 alt="Harbin Institute of Technology"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
@@ -829,10 +416,6 @@
                   December 2025
                 </p>
 
-                <p class="exp-location">
-                  Harbin, China
-                </p>
-
               </div>
             </div>
 
@@ -843,7 +426,7 @@
 
 
       <!-- =====================================================
-           科研经历
+           Research Experience
            ===================================================== -->
 
       <section class="section" id="research">
@@ -860,10 +443,8 @@
 
               <img
                 src="assets/img/institution.jpg"
-                alt="RPAI Laboratory"
+                alt="The Chinese University of Hong Kong"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
@@ -886,40 +467,26 @@
                   December 2025 – Present
                 </p>
 
-                <p class="exp-location">
-                  The Chinese University of Hong Kong · Hong Kong SAR
+                <p class="exp-detail">
+                  Developing vision-language-action systems for robotic
+                  endoscopy, with emphasis on autonomous colonoscopy
+                  withdrawal, supervised navigation, and multimodal
+                  action learning.
                 </p>
 
-                <ul class="achievement-list">
+                <p class="exp-detail">
+                  Integrating endoscopic video, six-actuator motor states,
+                  clinical phase and anatomy annotations, and electromagnetic
+                  tracking into synchronized multimodal datasets.
+                </p>
 
-                  <li>
-                    Develop vision-language-action systems for robotic
-                    endoscopy, with emphasis on autonomous colonoscopy
-                    withdrawal, supervised navigation, and multimodal
-                    action learning.
-                  </li>
-
-                  <li>
-                    Integrate endoscopic video, six-actuator motor states,
-                    clinical phase and anatomy annotations, and electromagnetic
-                    tracking into synchronized multimodal datasets.
-                  </li>
-
-                  <li>
-                    Build embedded and software infrastructure using STM32,
-                    CAN communication, ROS and ROS 2, Python control interfaces,
-                    YOLO-assisted labeling, synchronized CSV and video
-                    acquisition, and robot-state logging.
-                  </li>
-
-                  <li>
-                    Conduct anatomical phantom experiments for system
-                    validation, including motor-control testing,
-                    withdrawal-velocity estimation, and clinician-supervised
-                    autonomy.
-                  </li>
-
-                </ul>
+                <p class="exp-detail">
+                  Building research infrastructure using STM32,
+                  CAN communication, ROS and ROS 2,
+                  Python control interfaces, YOLO-assisted labeling,
+                  synchronized CSV and video acquisition,
+                  and robot-state logging.
+                </p>
 
               </div>
             </div>
@@ -931,7 +498,7 @@
 
 
       <!-- =====================================================
-           重点科研项目
+           Selected Research Projects
            ===================================================== -->
 
       <section class="section" id="projects">
@@ -945,40 +512,24 @@
           <!-- ColonVLA -->
           <div class="card project-card">
 
-            <div class="project-title">
-              ColonVLA
-            </div>
-
-            <div class="project-subtitle">
-              Motor-Based Mixture-of-Experts VLA for Autonomous Colonoscopy Withdrawal
-            </div>
-
             <p>
+              <strong>ColonVLA</strong>:
               Developing a motor-based mixture-of-experts
               vision-language-action framework for autonomous colonoscopy
               withdrawal on a six-actuator robotic endoscope platform.
             </p>
 
-            <ul class="achievement-list">
+            <p>
+              The framework uses latent action-mode decomposition to model
+              inspection, tracking, sampling, recovery,
+              and anatomy-dependent withdrawal control.
+            </p>
 
-              <li>
-                Use latent action-mode decomposition to model inspection,
-                tracking, sampling, recovery, and anatomy-dependent
-                withdrawal control.
-              </li>
-
-              <li>
-                Integrate endoscopic video, robot motor states,
-                clinical phase and anatomy labels, and electromagnetic
-                tracker measurements into a synchronized learning pipeline.
-              </li>
-
-              <li>
-                Use three-dimensional tracker coordinates to estimate
-                withdrawal velocity and support phantom-based validation.
-              </li>
-
-            </ul>
+            <p>
+              Endoscopic video, motor states, clinical phase and anatomy
+              labels, and electromagnetic tracker measurements are integrated
+              into a synchronized multimodal learning pipeline.
+            </p>
 
           </div>
 
@@ -986,37 +537,17 @@
           <!-- EndoNav -->
           <div class="card project-card">
 
-            <div class="project-title">
-              EndoNav
-            </div>
-
-            <div class="project-subtitle">
-              Clinician-Supervised Autonomous Endoscopic Navigation
-            </div>
-
             <p>
-              Designed a supervised autonomous navigation workflow for
-              endoscopic intervention in which human instructions interrupt
-              autonomous control and assign the operative instrument.
+              <strong>EndoNav</strong>:
+              Designed a clinician-supervised autonomous navigation workflow
+              for endoscopic intervention.
             </p>
 
-            <ul class="achievement-list">
-
-              <li>
-                Separate clinician intervention from normal autonomous
-                navigation to preserve clear operational control.
-              </li>
-
-              <li>
-                Use a binary verifier to determine whether autonomous
-                execution should safely continue or terminate.
-              </li>
-
-              <li>
-                Evaluate the workflow through anatomical phantom experiments.
-              </li>
-
-            </ul>
+            <p>
+              Human instructions interrupt autonomous control and assign
+              the operative instrument, while a binary verifier determines
+              whether autonomous execution should continue or terminate.
+            </p>
 
           </div>
 
@@ -1024,66 +555,37 @@
           <!-- EndoVLA-OOV / OpenHDS -->
           <div class="card project-card">
 
-            <div class="project-title">
-              EndoVLA-OOV / OpenHDS
-            </div>
-
-            <div class="project-subtitle">
-              Multimodal Data Collection for Robotic Endoscopy
-            </div>
-
             <p>
+              <strong>EndoVLA-OOV / OpenHDS</strong>:
               Collected and structured more than 3,000 endoscopic samples
-              from anatomical phantoms for vision-language-action model
-              development.
+              from anatomical phantoms for vision-language-action
+              model development.
             </p>
 
-            <ul class="achievement-list">
-
-              <li>
-                Developed synchronized video, motor-state, annotation,
-                and robot-state acquisition workflows.
-              </li>
-
-              <li>
-                Contributed to the EndoVLA-OOV research work in collaboration
-                with NVIDIA.
-              </li>
-
-            </ul>
+            <p>
+              Developed synchronized video, motor-state,
+              annotation, and robot-state acquisition workflows.
+            </p>
 
           </div>
 
 
-          <!-- 连续体机器人消防救援项目 -->
+          <!-- 连续体机器人消防救援 -->
           <div class="card project-card">
 
-            <div class="project-title">
-              Exploring Continuum Robot Agents for Fire Rescuing in Buildings
-            </div>
-
-            <div class="project-subtitle">
-              Continuum Robotics and Agentic Autonomy
-            </div>
-
             <p>
+              <strong>
+                Exploring Continuum Robot Agents for Fire Rescuing in Buildings
+              </strong>:
               Developed a continuum-robot agent concept for rescue assistance
               in structurally constrained building-fire environments.
             </p>
 
-            <ul class="achievement-list">
-
-              <li>
-                Combined robotic mobility, environmental perception,
-                and task-level autonomy for navigation in constrained spaces.
-              </li>
-
-              <li>
-                Received an award at the Hong Kong University Student
-                Innovation and Entrepreneurship Competition.
-              </li>
-
-            </ul>
+            <p>
+              The project integrates robotic mobility,
+              environmental perception, and task-level autonomy
+              for navigation in constrained spaces.
+            </p>
 
           </div>
 
@@ -1092,7 +594,7 @@
 
 
       <!-- =====================================================
-           企业经历
+           Professional Experience
            ===================================================== -->
 
       <section class="section" id="professional">
@@ -1111,8 +613,6 @@
                 src="assets/img/TCL.jpg"
                 alt="TCL Technology Corporation"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
@@ -1131,35 +631,19 @@
                   June 2025 – July 2025
                 </p>
 
-                <p class="exp-location">
-                  Huizhou, China
+                <p class="exp-detail">
+                  Supported cross-functional smartphone development by
+                  preparing technical documentation,
+                  executing more than 20 functional tests across
+                  three prototypes, and reporting more than eight
+                  critical issues for engineering triage.
                 </p>
 
-                <ul class="achievement-list">
-
-                  <li>
-                    Supported cross-functional smartphone development by
-                    preparing technical documentation and coordinating
-                    testing feedback.
-                  </li>
-
-                  <li>
-                    Executed more than 20 functional tests across three
-                    smartphone prototypes.
-                  </li>
-
-                  <li>
-                    Identified and reported more than eight critical issues
-                    for engineering triage.
-                  </li>
-
-                  <li>
-                    Improved defect traceability and review coordination,
-                    contributing to a 10-day acceleration of the
-                    flagship-model iteration cycle.
-                  </li>
-
-                </ul>
+                <p class="exp-detail">
+                  Improved defect traceability and review coordination,
+                  contributing to a 10-day acceleration of the
+                  flagship-model iteration cycle.
+                </p>
 
               </div>
             </div>
@@ -1171,7 +655,7 @@
 
 
       <!-- =====================================================
-           学生领导力与技术活动
+           Leadership & Technical Activities
            ===================================================== -->
 
       <section class="section" id="leadership">
@@ -1191,8 +675,6 @@
                 src="assets/img/CCIA.jpg"
                 alt="Chung Chi International Association"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
@@ -1211,31 +693,13 @@
                   April 2025 – Present
                 </p>
 
-                <p class="exp-location">
-                  The Chinese University of Hong Kong
+                <p class="exp-detail">
+                  Lead a 15-member executive team,
+                  delivered more than 10 events for over 1,000 participants,
+                  secured two funding partners,
+                  and launched a mentorship programme for more than
+                  50 incoming international students.
                 </p>
-
-                <ul class="achievement-list">
-
-                  <li>
-                    Lead a 15-member executive team.
-                  </li>
-
-                  <li>
-                    Delivered more than 10 events serving over
-                    1,000 participants.
-                  </li>
-
-                  <li>
-                    Secured two funding partners.
-                  </li>
-
-                  <li>
-                    Launched a mentorship programme for more than
-                    50 incoming international students.
-                  </li>
-
-                </ul>
 
               </div>
             </div>
@@ -1252,8 +716,6 @@
                 src="assets/img/institution.jpg"
                 alt="CUHK RoboMaster Team"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
@@ -1272,18 +734,11 @@
                   December 2025 – Present
                 </p>
 
-                <ul class="achievement-list">
-
-                  <li>
-                    Develop computer-vision capabilities for robotic platforms.
-                  </li>
-
-                  <li>
-                    Work on real-time object detection, target tracking,
-                    and deployment-oriented model optimization.
-                  </li>
-
-                </ul>
+                <p class="exp-detail">
+                  Develop computer-vision capabilities for robotic platforms,
+                  focusing on real-time object detection,
+                  target tracking, and deployment-oriented model optimization.
+                </p>
 
               </div>
             </div>
@@ -1295,57 +750,13 @@
 
 
       <!-- =====================================================
-           量化成果
-           ===================================================== -->
-
-      <section class="section" id="impact">
-
-        <h2 class="section-title">
-          Selected Impact
-        </h2>
-
-        <div class="section-body">
-
-          <div class="metric-row">
-
-            <div class="metric-card">
-              <span class="metric-number">3,000+</span>
-
-              <span class="metric-label">
-                Endoscopic samples collected and structured
-              </span>
-            </div>
-
-            <div class="metric-card">
-              <span class="metric-number">20+</span>
-
-              <span class="metric-label">
-                Smartphone functional tests completed
-              </span>
-            </div>
-
-            <div class="metric-card">
-              <span class="metric-number">1,000+</span>
-
-              <span class="metric-label">
-                Participants reached through student events
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           获奖经历
+           Awards
            ===================================================== -->
 
       <section class="section" id="awards">
 
         <h2 class="section-title">
-          Award
+          Awards
         </h2>
 
         <div class="section-body">
@@ -1359,7 +770,6 @@
               </span>
 
               <div class="award-text">
-
                 <strong>
                   Hong Kong University Student Innovation and
                   Entrepreneurship Competition
@@ -1367,21 +777,20 @@
 
                 <p>
                   Award recipient for the continuum robot agent project
-                  focused on navigation and rescue assistance in
-                  constrained building-fire environments.
+                  for navigation and rescue assistance
+                  in constrained building-fire environments.
                 </p>
-
               </div>
+
             </div>
 
           </div>
-
         </div>
       </section>
 
 
       <!-- =====================================================
-           技术技能
+           Technical Skills
            ===================================================== -->
 
       <section class="section" id="skills">
@@ -1394,37 +803,31 @@
 
           <div class="card">
 
-            <div class="skill-group">
-              <strong>Programming</strong>
+            <p>
+              <strong>Programming:</strong>
               Python, C, C++
-            </div>
+            </p>
 
-            <div class="skill-group">
-              <strong>Robotics & Embedded Systems</strong>
+            <p>
+              <strong>Robotics & Embedded Systems:</strong>
               STM32, CAN communication, ROS, ROS 2, Linux,
               electromagnetic tracking, embedded-system design,
               six-motor control, and robot-state acquisition
-            </div>
+            </p>
 
-            <div class="skill-group">
-              <strong>Computer Vision & Artificial Intelligence</strong>
+            <p>
+              <strong>Computer Vision & Artificial Intelligence:</strong>
               YOLO, object detection, visual tracking,
-              vision-language-action models, multimodal data pipelines,
-              model-assisted annotation, and robotic perception
-            </div>
+              vision-language-action models,
+              multimodal data pipelines,
+              and robotic perception
+            </p>
 
-            <div class="skill-group">
-              <strong>Research Infrastructure</strong>
-              Python control interfaces, synchronized CSV and video
-              acquisition, endoscopic datasets, anatomical phantom
-              experiments, and multimodal robot logging
-            </div>
-
-            <div class="skill-group">
-              <strong>Languages</strong>
-              Mandarin: Native · Cantonese: Fluent ·
-              English: Fluent, IELTS 7.0
-            </div>
+            <p>
+              <strong>Languages:</strong>
+              Mandarin (native), Cantonese (fluent),
+              English (fluent; IELTS 7.0)
+            </p>
 
           </div>
 
@@ -1433,7 +836,7 @@
 
 
       <!-- =====================================================
-           论文栏目
+           Publications
            ===================================================== -->
 
       <section class="section" id="publications">
@@ -1444,21 +847,34 @@
 
         <div class="section-body">
 
-          <div class="card">
+          <div class="publications">
 
-            <!--
-              目前没有正式公开的论文信息，因此暂时留空。
+            <ol class="bibliography">
 
-              等论文公开后，可以在这里加入：
-              论文标题、作者、期刊、论文链接、代码链接。
-            -->
-            <p class="empty-placeholder">
-              Publications and manuscripts will be added after they are
-              publicly available.
-            </p>
+              <li>
+                <div class="pub-row">
+
+                  <div class="pub-content">
+
+                    <!-- 暂时没有公开论文，后续可在这里加入 -->
+                    <div class="title">
+                      Publications and manuscripts will be added
+                      after they are publicly available.
+                    </div>
+
+                    <div class="author"></div>
+
+                    <div class="periodical"></div>
+
+                    <div class="links"></div>
+
+                  </div>
+                </div>
+              </li>
+
+            </ol>
 
           </div>
-
         </div>
       </section>
 
@@ -1469,10 +885,7 @@
          页脚
          ======================================================= -->
 
-    <!--
-      已删除原模板作者信息。
-      这里只保留你的个人版权信息。
-    -->
+    <!-- 只保留个人版权信息 -->
     <footer class="site-footer">
       <p>
         &copy; 2026 Evan Wu. All rights reserved.
@@ -1486,7 +899,7 @@
        本地 JavaScript 文件
        ========================================================= -->
 
-  <!-- Luka 模板原有的缩放兼容脚本 -->
+  <!-- Evan 主页缩放兼容脚本 -->
   <script src="assets/js/scale.fix.js"></script>
 
 
@@ -1498,29 +911,26 @@
     (function () {
 
       /*
-        获取深色模式切换按钮。
+        获取主题切换按钮和按钮图标。
       */
       const themeToggle =
         document.getElementById('themeToggle');
 
-      /*
-        获取按钮内部的图标。
-      */
       const icon =
         themeToggle.querySelector('i');
 
 
       /**
-       * 设置页面主题。
+       * 设置深色或浅色主题。
        *
        * @param {boolean} isDark
-       * true：深色模式
-       * false：浅色模式
+       * true 表示深色模式。
+       * false 表示浅色模式。
        */
       function setTheme(isDark) {
 
         /*
-          在 html 根节点上保存当前主题状态。
+          在 html 根节点上保存主题状态。
         */
         document.documentElement.setAttribute(
           'data-theme',
@@ -1528,7 +938,7 @@
         );
 
         /*
-          深色模式下显示太阳图标。
+          深色模式显示太阳图标。
         */
         icon.classList.toggle(
           'fa-sun',
@@ -1536,7 +946,7 @@
         );
 
         /*
-          浅色模式下显示月亮图标。
+          浅色模式显示月亮图标。
         */
         icon.classList.toggle(
           'fa-moon',
@@ -1544,10 +954,7 @@
         );
 
         /*
-          将用户选择保存到浏览器本地存储。
-
-          这样用户下次打开网页时，
-          页面会继续使用上次选择的主题。
+          保存用户选择。
         */
         localStorage.setItem(
           'theme',
@@ -1557,14 +964,14 @@
 
 
       /*
-        读取用户上一次保存的主题。
+        读取用户之前保存的主题。
       */
       const savedTheme =
         localStorage.getItem('theme');
 
 
       /*
-        检测用户操作系统是否偏好深色模式。
+        获取操作系统的主题偏好。
       */
       const prefersDark =
         window.matchMedia(
@@ -1573,10 +980,8 @@
 
 
       /*
-        如果用户以前手动选择过主题，
-        优先使用保存的主题。
-
-        否则跟随操作系统主题。
+        优先使用用户保存的主题。
+        如果没有保存记录，则跟随系统主题。
       */
       setTheme(
         savedTheme
@@ -1586,7 +991,7 @@
 
 
       /*
-        用户点击按钮时切换主题。
+        点击按钮时切换主题。
       */
       themeToggle.addEventListener(
         'click',
@@ -1603,9 +1008,7 @@
 
 
       /*
-        阻止尚未设置完成的空白链接跳转。
-
-        目前主要用于 Google Scholar。
+        阻止暂时为空的链接跳转。
       */
       document
         .querySelectorAll('a[data-empty-link="true"]')
@@ -1622,68 +1025,8 @@
 
 
       /*
-        为所有页面内部导航链接加入平滑滚动效果。
-      */
-      document
-        .querySelectorAll('a[href^="#"]')
-        .forEach(function (link) {
-
-          link.addEventListener(
-            'click',
-            function (event) {
-
-              /*
-                获取目标栏目 ID。
-              */
-              const targetId =
-                link.getAttribute('href');
-
-              /*
-                空链接不处理。
-              */
-              if (
-                !targetId ||
-                targetId === '#'
-              ) {
-                return;
-              }
-
-              /*
-                查找目标栏目。
-              */
-              const targetElement =
-                document.querySelector(targetId);
-
-              /*
-                如果目标栏目不存在，则停止执行。
-              */
-              if (!targetElement) {
-                return;
-              }
-
-              /*
-                阻止浏览器默认的瞬间跳转。
-              */
-              event.preventDefault();
-
-              /*
-                平滑滚动到目标栏目。
-              */
-              targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          );
-
-        });
-
-
-      /*
-        页面滚动动画。
-
-        当栏目进入浏览器可见区域时，
-        为该栏目加入 visible 类。
+        页面栏目进入可见区域时，
+        添加 visible 类并触发原模板动画。
       */
       if ('IntersectionObserver' in window) {
 
@@ -1697,16 +1040,10 @@
 
                   if (entry.isIntersecting) {
 
-                    /*
-                      触发 CSS 显示动画。
-                    */
                     entry.target.classList.add(
                       'visible'
                     );
 
-                    /*
-                      动画触发后停止监听该栏目。
-                    */
                     observer.unobserve(
                       entry.target
                     );
@@ -1718,9 +1055,6 @@
             },
 
             {
-              /*
-                当栏目至少有 10% 进入可见区域时触发。
-              */
               threshold: 0.1
             }
 
@@ -1741,8 +1075,7 @@
       } else {
 
         /*
-          如果浏览器不支持 IntersectionObserver，
-          直接显示所有栏目。
+          兼容不支持 IntersectionObserver 的旧浏览器。
         */
         document
           .querySelectorAll('.section')
