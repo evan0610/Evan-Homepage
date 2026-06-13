@@ -153,7 +153,6 @@ evan0610.github.io/
 │   │   ├── avatar.jpg
 │   │   ├── favicon.jpg
 │   │   ├── institution.jpg
-│   │   ├── HIT.jpg
 │   │   ├── TCL.jpg
 │   │   ├── CCIA.jpg
 │   │   └── CUEE.jpg
